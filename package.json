@@ -1,5 +1,5 @@
 {
-  "name": "webprodigies-fuzzie-app",
+  "name": "Zentrox-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.29.9",
+    "@clerk/nextjs": "^4.31.7",
     "@hookform/resolvers": "^3.3.4",
     "@notionhq/client": "^2.2.14",
     "@prisma/client": "5.11.0",

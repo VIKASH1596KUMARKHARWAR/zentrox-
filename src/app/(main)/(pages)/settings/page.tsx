@@ -6,11 +6,12 @@ import { currentUser } from '@clerk/nextjs'
 
 type Props = {}
 
-const Settings = async (props: Props) => {
+const Settings = async (props) => {
   const authUser = await currentUser()
   if (!authUser) return null
 
   const user = await db.user.findUnique({ where: { clerkId: authUser.id } })
+  console.log("User from DB:", user)
   const removeProfileImage = async () => {
     'use server'
     const response = await db.user.update({
