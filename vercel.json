@@ -1,0 +1,10 @@
+
+{
+    "rewrites": [
+      {
+        "source": "/api/clerk-webhook",
+        "destination": "/api/clerk-webhook-fix"
+      }
+    ]
+  }
+  
