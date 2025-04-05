@@ -1,17 +1,17 @@
-export const dynamic = "force-dynamic"; // Avoids static analysis
-export const runtime = "nodejs"; // Ensures it's not edge-specific
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
-  // ✅ Guard: Avoid execution during static build
-  if (process.env.NEXT_PHASE === 'phase-production-build') {
-    return new NextResponse('Build-safe route skip', { status: 200 });
+  // 👇 Prevent crash during build
+  if (process.env.NODE_ENV === 'production' && !req?.headers) {
+    return new NextResponse('Skip static build', { status: 200 });
   }
 
   try {
-    const body = await req.json?.();
+    const body = await req.json();
     const { id, email_addresses, first_name, image_url } = body?.data ?? {};
     const email = email_addresses?.[0]?.email_address;
 
