@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic"
+
+
 import React from 'react'
 import Stripe from 'stripe'
 import { currentUser } from '@clerk/nextjs'
