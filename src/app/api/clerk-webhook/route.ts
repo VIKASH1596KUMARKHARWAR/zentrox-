@@ -4,6 +4,9 @@ export const preferredRegion = 'auto';
 
 import { db } from '@/lib/db'
 import { NextResponse } from 'next/server'
+export const config = {
+  runtime: 'nodejs',
+};
 
 export async function POST(req: Request) {
   if (process.env.NEXT_PHASE === 'phase-production-build') {
