@@ -6,7 +6,7 @@ import { currentUser } from '@clerk/nextjs'
 
 type Props = {}
 
-const Settings = async (props :any) => {
+const Settings = async (props: Props) => {
   const authUser = await currentUser()
   if (!authUser) return null
 
