@@ -5,9 +5,9 @@ import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
-  // 👇 Prevent crash during build
+  // Prevent build crash
   if (process.env.NODE_ENV === 'production' && !req?.headers) {
-    return new NextResponse('Skip static build', { status: 200 });
+    return new NextResponse('Skipping during build', { status: 200 });
   }
 
   try {
@@ -32,11 +32,9 @@ export async function POST(req: Request) {
       },
     });
 
-    return new NextResponse('User updated in database successfully', {
-      status: 200,
-    });
+    return new NextResponse('User updated', { status: 200 });
   } catch (error) {
-    console.error('❌ Error updating database:', error);
-    return new NextResponse('Error updating user in database', { status: 500 });
+    console.error('❌ Error:', error);
+    return new NextResponse('Error', { status: 500 });
   }
 }

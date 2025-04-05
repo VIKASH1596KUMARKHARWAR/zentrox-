@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "api/clerk-webhook/route.ts": {
+        "runtime": "nodejs18.x"
+      }
+    }
+  }
+  
