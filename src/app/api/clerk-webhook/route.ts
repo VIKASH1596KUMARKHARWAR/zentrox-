@@ -1,6 +1,7 @@
-export const dynamic = 'force-dynamic'; // Force runtime evaluation
-export const runtime = 'nodejs';        // Ensure Node.js is used (not edge)
-export const preferredRegion = 'auto';  // Optional, good for latency
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+export const preferredRegion = 'auto';
+export const revalidate = 0;
 
 import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
