@@ -1,14 +1,14 @@
-export const dynamic = 'force-dynamic';
-export const runtime = 'nodejs';
-export const preferredRegion = 'auto';
+export const dynamic = 'force-dynamic'; // Force runtime evaluation
+export const runtime = 'nodejs';        // Ensure Node.js is used (not edge)
+export const preferredRegion = 'auto';  // Optional, good for latency
 
 import { db } from '@/lib/db';
 import { NextResponse } from 'next/server';
 
-// ✅ Skip webhook execution during Vercel static builds
 export async function POST(req: Request) {
-  if (process.env.VERCEL === '1' && process.env.NEXT_PUBLIC_SKIP_WEBHOOK_BUILD === 'true') {
-    return new NextResponse('🔁 Skipping webhook during Vercel build', { status: 200 });
+  // ✅ Block webhook execution during static build phase on Vercel
+  if (process.env.NEXT_PHASE === 'phase-production-build') {
+    return new NextResponse('🛑 Skipping webhook during static build', { status: 200 });
   }
 
   try {
@@ -35,9 +35,7 @@ export async function POST(req: Request) {
       },
     });
 
-    return new NextResponse('✅ User updated in database successfully', {
-      status: 200,
-    });
+    return new NextResponse('✅ User updated in database successfully', { status: 200 });
   } catch (error) {
     console.error('❌ Error updating database:', error);
     return new NextResponse('❌ Error updating user in database', {
