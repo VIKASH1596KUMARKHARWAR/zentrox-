@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/sonner'
 import { BillingProvider } from '@/providers/billing-provider'
 
 const font = DM_Sans({ subsets: ['latin'] })
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: 'Zentrox',
