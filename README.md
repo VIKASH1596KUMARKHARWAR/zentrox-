@@ -33,6 +33,11 @@
 - 🧑‍💻 **Developer Support** – REST API endpoints, logs, and modular architecture.
 
 ---
+![Zentrox Screenshot](assets/ui-2.png)
+![Zentrox Screenshot](assets/ui-3-pricing.png)
+![Zentrox Screenshot](assets/ui-4-drivePermission.png)
+![Zentrox Screenshot](assets/ui-5-NodeBased-workflow.png)
+![Zentrox Screenshot](assets/ui-6-driveSetup.png)
 
 ## 🛠️ Tech Stack
 
