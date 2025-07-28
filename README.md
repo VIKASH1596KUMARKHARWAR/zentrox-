@@ -32,11 +32,19 @@
 - 💰 **Monetization** – Subscription system integrated using Stripe API.
 - 🧑‍💻 **Developer Support** – REST API endpoints, logs, and modular architecture.
 
----
+---#### 🧠 Workflow Builder UI
 ![Zentrox Screenshot](assets/ui-2.png)
+
+#### 💰 Pricing Page
 ![Zentrox Screenshot](assets/ui-3-pricing.png)
+
+#### 🔐 Drive Permission Setup
 ![Zentrox Screenshot](assets/ui-4-drivePermission.png)
+
+#### 🔁 Node-Based Workflow Builder
 ![Zentrox Screenshot](assets/ui-5-NodeBased-workflow.png)
+
+#### 📁 Google Drive Setup Panel
 ![Zentrox Screenshot](assets/ui-6-driveSetup.png)
 
 ## 🛠️ Tech Stack
