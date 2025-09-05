@@ -45,4 +45,4 @@ const UploadCareButton = ({ onUpload }: Props) => {
   )
 }
 
-export default UploadCareButton thi sis what i have
+export default UploadCareButton 
